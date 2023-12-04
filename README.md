@@ -1,6 +1,9 @@
 # Desafio---Full-Stack-Backend
  Aplicação para gestão de hóspedes em um hotel. Permite a realização de reservas, check-in e checkout.
 
+Vídeo: https://drive.google.com/file/d/1pE6ars5MP23B5fxsWUAndDmLbJMyQ_I0/view?usp=sharing
+
+
 **Requisitos funcionais:**  
 
 Armazenar de forma persiste o cadastro de hóspedes (Informações mínimas:  Nome, documento, telefone); 
