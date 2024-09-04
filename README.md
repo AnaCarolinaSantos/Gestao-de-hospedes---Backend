@@ -1,43 +1,60 @@
-# Desafio---Full-Stack-Backend
- Aplicação para gestão de hóspedes em um hotel. Permite a realização de reservas, check-in e checkout.
+# Gestão de hóspedes
 
-Vídeo: https://drive.google.com/file/d/1pE6ars5MP23B5fxsWUAndDmLbJMyQ_I0/view?usp=sharing
+![Badge de Status](https://img.shields.io/badge/status-Done-green)
 
+Aplicação para gestão de hóspedes em um hotel. Permite a realização de reservas, check-in e checkout.
 
-**Requisitos funcionais:**  
+## Índice
 
-Armazenar de forma persiste o cadastro de hóspedes (Informações mínimas:  Nome, documento, telefone); 
+- [Descrição do Projeto](#descrição-do-projeto)
+- [Funcionalidades](#funcionalidades)
+- [Regras de Negócio](#regras-de-negócio)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [No Spring Initializr](#no-spring-initializr)
+- [No IntelliJ IDEA](#no-intellij-idea)
+- [Banco de Dados](#banco-de-dados)
+- [Contato](#contato)
 
-Armazenar de forma persistente as reservas geradas; 
+## Descrição do Projeto
 
-Deve ser possível localizar hóspedes por: nome, documento e telefone; 
+Este projeto tem como objetivo facilitar a gestão de hóspedes em um hotel, oferecendo uma solução eficiente para controlar reservas, check-ins e checkouts, além de calcular automaticamente os custos das diárias e taxas adicionais. A motivação por trás do desenvolvimento dessa aplicação é a necessidade de otimizar o processo de atendimento e gerenciamento de dados dos hóspedes, garantindo uma experiência mais fluida e ágil tanto para os funcionários quanto para os clientes.
 
-Localizar hóspedes que ainda estão no hotel; 
+## Funcionalidades
 
-Localizar hóspedes que tem reservas, mas ainda não realizaram o check-in.
+Principais funcionalidades do projeto:
 
-Permitir ao atendente realizar o check-in; 
+- [x] Armazenar de forma persistente o cadastro de hóspedes (Informações mínimas: Nome, documento, telefone).
+- [x] Armazenar de forma persistente as reservas geradas.
+- [x] Localizar hóspedes por: nome, documento e telefone.
+- [x] Localizar hóspedes que ainda estão no hotel.
+- [x] Localizar hóspedes que tem reservas, mas ainda não realizaram o check-in.
+- [x] Permitir ao atendente realizar o check-in.
+- [x] Permitir ao atendente realizar o checkout.
 
-Permitir ao atendente realizar o checkout; 
+## Regras de Negócio
 
+Principais regras de negócio do projeto:
 
-**Regras de negócio:** 
+- [x] Diárias de segunda à sexta-feira terão um valor fixo de R$ 120,00.
+- [x] Diárias em finais de semana terão um valor fixo de R$ 180,00.
+- [x] Caso o hóspede tenha carro e necessite utilizar as vagas disponíveis no estabelecimento, será cobrado uma taxa adicional de R$ 15,00 de segunda à sexta-feira e R$ 20,00 nos finais de semana.
+- [x] O horário para a realização do check-in será a partir das 14h. Ao tentar realizar o procedimento antes do horário prévio, o sistema deverá emitir um  alerta.
+- [x] O horário para a realização do checkout será até as 12h. Caso o procedimento seja realizado posterior, deverá ser cobrada uma taxa adicional de 50% do valor da diária (Respeitando a variação para dias úteis e finais de  semana).
+- [x] Durante o processo de checkout, deverá ser exibido em detalhes o total geral da reserva a ser paga.
 
-Diárias de segunda à sexta-feira terão um valor fixo de R$ 120,00; 
+## Tecnologias Utilizadas
 
-Diárias em finais de semana terão um valor fixo de R$ 180,00; 
+Este projeto foi desenvolvido com as seguintes tecnologias:
 
-Caso o hóspede tenha carro e necessite utilizar as vagas disponíveis no estabelecimento, será cobrado uma taxa adicional de R$ 15,00 de segunda à  sexta-feira e R$ 20,00 nos finais de semana; 
+- **Linguagens de Programação:** Java, HTML, CSS, SCSS, TypeScript, etc.
+- **Framework/Biblioteca:** Angular, Bootstrap, Material UI, etc.
+- **Banco de Dados:** PostgreSQL, etc.
+- **Ferramentas:** Remove.bg, etc.
+- **Outras tecnologias:** GitHub, Visual Studio Code, IntelliJ IDEA, etc.
 
-O horário para a realização do check-in será a partir das 14h00min. Ao tentar realizar o procedimento antes do horário prévio, o sistema deverá emitir um  alerta;
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
 
-O horário para a realização do checkout será até as 12h00min. Caso o procedimento seja realizado posterior, deverá ser cobrada uma taxa adicional de  50% do valor da diária (Respeitando a variação para dias úteis e finais de  semana);
-
-Durante o processo de checkout, deverá ser exibido em detalhes o total geral da  reserva a ser paga; 
-
-# BACK-END
-
-No Spring Initializr:
+## No Spring Initializr 
 
 ```
 Project: Maven
@@ -48,7 +65,7 @@ Java: 17
 Dependencies: PostgreSQL Driver, Spring Web, Spring Data JPA, Lombok 
 ```
 
-No IntelliJ IDEA:
+## No IntelliJ IDEA
 
 ```
 Compilar pelo arquivo FullStackApplication
@@ -56,7 +73,7 @@ Compilar pelo arquivo FullStackApplication
 
 OBS: Verificar URL, USER e PASSWORD no arquivo ConexaoBD
 
-# BANCO DE DADOS
+## Banco de Dados
 
 Baixar o postgres: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
 
@@ -209,3 +226,12 @@ BEFORE UPDATE ON reservas
 FOR EACH ROW
 EXECUTE FUNCTION public.validar_reserva();
 ```
+
+## Contato
+
+Se tiver alguma dúvida ou sugestão, entre em contato comigo:
+
+- Nome: Ana Carolina Santos
+- Email: ana.c.santos2003@gmail.com
+- LinkedIn: [ana-carolina-santos](https://www.linkedin.com/in/ana-carolina-santos-3549a2218/)
+- GitHub: [AnaCarolinaSantos](https://github.com/AnaCarolinaSantos)
